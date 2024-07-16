@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  @include tablet {
+    flex-direction: row;
+    width: 100%;
+  }
+  &__home {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    @include tablet {
+      width: 70%;
+    }
+    &-image {
+      height: 540px;
+    }
+  }
+
+  &__left {
+    background-color: $secondary-mercury;
+    font-family: "Gluten", cursive;
+    padding: 3rem;
+    @include tablet {
+      flex: 6;
+      padding-top: 8rem;
+      margin-right: 0;
+    }
+    &--title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    &--paragraph {
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      line-height: 1.6rem;
+    }
+    &--portfolio {
+      padding: 2rem;
+      font-family: "Gluten", cursive;
+      @include tablet {
+        padding: 3rem;
+        flex: 6;
+        margin-right: 0;
+      }
+    }
+  }
+  &__right {
+    padding: 2rem;
+    @include tablet {
+      display: flex;
+      flex: 6;
+      flex-direction: column;
+      width: 100%;
+      margin-right: 2%;
+    }
+    &-success-message {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+  &__rounded {
+    @include tablet {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    img {
+      width: 98%;
+      border-radius: 40% !important;
+    }
+  }
+}

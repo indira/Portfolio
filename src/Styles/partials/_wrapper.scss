@@ -1,0 +1,21 @@
+/*Overall Section wrapper*/
+.wrapper {
+  overflow: hidden;
+  padding-left: $small;
+  padding-right: $small;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    padding-left: $large;
+    padding-right: $large;
+  }
+  @include desktop {
+    padding-left: $vlarge;
+    padding-right: $vlarge;
+  }
+  &__border {
+    border-top: 1px solid $secondary-mercury;
+    border-bottom: 1px solid $secondary-mercury;
+  }
+}

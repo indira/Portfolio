@@ -1,0 +1,67 @@
+/* universal-reset */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Spectral";
+}
+a {
+  text-decoration: none;
+  color: $orange;
+}
+p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0 0.8rem 0;
+  @include tablet {
+    margin: 0.8rem 0 0.5rem 0;
+  }
+}
+/* Error state for input fields */
+.is-invalid {
+  border: 1px solid red;
+}
+
+/* Error message styles */
+.invalid-feedback {
+  color: red;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Loading {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.delete {
+  color: red;
+}
+hr {
+  border-bottom: 2px solid $secondary-black;
+  margin: 1rem 0;
+}
+
+.password-container {
+  position: relative;
+  width: max-content;
+}
+
+.password-input {
+  padding-right: 30px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+}

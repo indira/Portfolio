@@ -1,0 +1,66 @@
+/*This is for the fonts and stylings of the title, subtitle and paragraphs*/
+.headline {
+  &--exlarge {
+    font-weight: 700;
+    font-size: $large;
+    margin-bottom: $large;
+    @include tablet {
+      line-height: 44px;
+    }
+    @include desktop {
+      line-height: 34px;
+    }
+  }
+  &--large {
+    font-weight: 700;
+    font-size: $medium;
+    margin-bottom: $small;
+    @include tablet {
+      line-height: 44px;
+    }
+    @include desktop {
+      line-height: 34px;
+    }
+  }
+  &--medium {
+    line-height: 30px;
+    @include tablet {
+      font-size: $medium;
+      line-height: 44px;
+      font-weight: 500;
+    }
+  }
+  &--small {
+    font-size: $small;
+    line-height: 44px;
+  }
+  &--muted {
+    color: $primary-black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &-avatar-large {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 15px;
+    position: relative;
+    top: 18px;
+  }
+
+  &-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 1rem;
+    margin-right: 5px;
+    position: relative;
+    margin-right: 1rem;
+    top:0.7rem;
+    @include desktop {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1.9rem;
+      top:0;
+    }
+  }
+}

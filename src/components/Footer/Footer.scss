@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  margin: $small;
+  @include desktop {
+    margin: $vlarge;
+  }
+  &__text {
+    font-size: $small;
+    font-family: "Spectral";
+    @include desktop {
+      font-size: $medium;
+      margin: $vsmall;
+    }
+  }
+}

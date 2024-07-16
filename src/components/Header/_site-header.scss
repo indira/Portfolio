@@ -1,0 +1,37 @@
+/*Header Section of the site*/
+.site-header {
+  display: flex;
+  flex-direction: column;
+  height: 9rem;
+  padding-left: 0;
+  @include desktop {
+    flex-direction: row;
+    height: 6rem;
+    background-color: $secondary-mercury;
+  }
+  &__logo {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: $medium;
+    color: $primary-black !important;
+    text-align: center;
+    padding-left:1rem;
+    padding-right: 1rem;
+    @include desktop {
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: $large;
+      margin-left: 0.5rem;
+    }
+  }
+  &__elements {
+    margin: auto;
+    padding: 1rem;
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}

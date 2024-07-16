@@ -1,0 +1,13 @@
+/*Importing all the styles in main.scss file and importing the main.css file to the index.js file to organize the styling*/
+@import "normalize.css";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/global";
+@import "./partials/wrapper";
+@import "./partials/headline";
+@import "./partials/forms";
+@import "./partials/container";
+@import "../../src/components/Header/site-header";
+@import "../../src/components//Profile/Profile";
+@import "../../src/components/Posts/Posts";
+@import "../../src/components/Footer/Footer";

@@ -1,0 +1,98 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  @include tablet {
+    width: 60%;
+  }
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin-right: 5px;
+    position: relative;
+    margin-right: 1rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $secondary-mercury;
+    border: 0.1px solid $cloud;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding:1rem;
+    @include tablet {
+      padding:2rem;
+    }
+    &--img {
+      display:flex;
+      align-items: center;
+    }
+    @include tablet {
+      justify-content: space-between;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    &-no {
+      color: $green;
+    }
+  }
+  &__posts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: $secondary-alabaster;
+    border-radius: 10px;
+    border: 0.1px solid $cloud;
+    position: relative;
+    font-size: 1.1rem;
+    @include desktop {
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    h2 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      @include tablet {
+        font-size: $medium;
+      }
+    }
+    &-img {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: 0.2rem;
+      margin-right: 0.2rem;
+      margin-right: 1rem;
+      padding-left: 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      @include tablet {
+        font-size: 1.1rem;
+      }
+    }
+    &-actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 2rem;
+      padding-right: 3rem;
+      font-size: 1.5rem;
+      .edit {
+        color: $secondary-blue; // blue color
+      }
+      .delete {
+        color: $red; // red color
+      }
+    }
+  }
+}

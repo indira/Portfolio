@@ -1,0 +1,134 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 2rem;
+  @include desktop {
+    padding: 4rem 8rem;
+  }
+}
+input,
+textarea {
+  height: 2.5rem;
+  padding-left: 1rem;
+  border: 1px solid $cloud;
+  border-radius: 0.25rem;
+  font-family: "Titillium Web";
+  font-size: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  @include tablet {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  &:focus {
+    border-radius: 1.2rem;
+    outline: none;
+    box-shadow: 0 0 0 0.1rem $secondary-blue;
+  }
+  &::placeholder {
+    font-weight: 400;
+    color: $secondary-black;
+    font-size: 1rem;
+  }
+}
+textarea {
+  height: 150px;
+}
+
+label {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.button {
+  padding: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  @include tablet {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 0.5rem 0.5rem;
+  }
+
+  &--blue {
+    padding: 0.5rem 0.9rem;
+    background-color: $secondary-blue;
+    color: $primary-white;
+    font-size: $small;
+    border: 0;
+  }
+  &--green {
+    padding: 0.5rem 0.9rem;
+    background-color: $green;
+    color: $primary-white;
+    font-size: $small;
+    margin-right: 0.5rem;
+    border: 0;
+  }
+  &--white {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    color: black;
+    border: none;
+    font-size: $medium;
+    box-shadow: 0 0 0 0.1rem #343a40;
+    &-small {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      &-top {
+        margin-bottom: 0rem;
+      }
+      @include tablet {
+        margin-top: 3rem;
+        margin-right: 0.8rem;
+        width: 45%;
+      }
+      a {
+        color: black;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &-site-button {
+    width: 30%;
+    font-size: 0.7rem;
+    margin-bottom: 3rem;
+    padding: 0.7rem;
+    @include tablet {
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      width: 30%;
+      margin: 0.5rem 0.5rem;
+    }
+    @include desktop {
+      padding: 1rem;
+    }
+  }
+  &:hover {
+    outline: none;
+    color: white !important;
+    box-shadow: 0 0 0 0.1rem #343a40;
+    background-color: #343a40;
+    font-weight: 500;
+    border: none;
+  }
+}
