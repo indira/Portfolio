@@ -45,13 +45,13 @@ function SinglePost() {
       <div className="wrapper wrapper-border">
         <div className="features">
           <div className="features__single">
-            <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+            <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
             <div className="metabox">
               <p>
                 Posted by <Link to={`/profile/${idAut}`}>{author}</Link> on {date}
               </p>
             </div>
-            <p dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+            <p className="gallery" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
           </div>
         </div>
       </div>

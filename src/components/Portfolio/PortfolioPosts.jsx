@@ -10,7 +10,7 @@ const PortfolioPosts = () => {
     // Fetch posts
     const fetchPosts = async () => {
       try {
-        let url = `${process.env.REACT_APP_API_ROOT}posts?categories=9`
+        let url = `${process.env.REACT_APP_API_ROOT}posts?categories=6`
         const response = await axios.get(url)
         // Sort posts by date and time in ascending order
         const sortedPosts = response.data.sort((a, b) => new Date(a.date) - new Date(b.date))
