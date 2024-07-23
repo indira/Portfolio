@@ -155,7 +155,7 @@ const Register = () => {
       }
       fetchResults()
     }
-  }, [state.username.checkCount, dispatch])
+  }, [state.username.checkCount, state.username.value, dispatch])
 
   useEffect(() => {
     if (state.email.checkCount) {
@@ -170,7 +170,7 @@ const Register = () => {
       }
       fetchResults()
     }
-  }, [state.email.checkCount, dispatch])
+  }, [state.email.checkCount, state.email.value, dispatch])
 
   useEffect(() => {
     if (state.submitCount) {
