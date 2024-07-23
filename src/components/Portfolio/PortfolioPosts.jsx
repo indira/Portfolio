@@ -24,7 +24,7 @@ const PortfolioPosts = () => {
     fetchPosts()
   }, [])
   return (
-    <Page title="Portfolio">
+    <Page title="Experience">
       <div className="wrapper  wrapper__border">
         <div className="features">
           <div className="features__inner">

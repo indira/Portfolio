@@ -2,7 +2,7 @@
 .site-header {
   display: flex;
   flex-direction: column;
-  height: 9rem;
+  height: 11rem;
   padding-left: 0;
   @include desktop {
     flex-direction: row;
@@ -15,7 +15,7 @@
     font-size: $medium;
     color: $primary-black !important;
     text-align: center;
-    padding-left:1rem;
+    padding-left: 1rem;
     padding-right: 1rem;
     @include desktop {
       margin-top: auto;
@@ -24,14 +24,23 @@
       margin-left: 0.5rem;
     }
   }
+  &__navbar {
+    margin: auto;
+    padding-top: $vsmall;
+    font-size: $medium;
+    @include desktop {
+      font-size: $medium;
+      margin-right: 20px;
+    }
+  }
   &__elements {
     margin: auto;
     padding: 1rem;
     @include desktop {
       display: flex;
       flex-direction: row;
+      align-items: end;
       margin-top: auto;
-      margin-bottom: auto;
     }
   }
 }

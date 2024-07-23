@@ -22,7 +22,6 @@ textarea {
   font-family: "Titillium Web";
   font-size: 1.5rem;
   width: 100%;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: 2rem;
   @include tablet {
@@ -46,7 +45,6 @@ textarea {
 
 label {
   width: 100%;
-  margin-top: 1.5rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -131,4 +129,12 @@ label {
     font-weight: 500;
     border: none;
   }
+}
+.alert {
+  background-color: $red;
+  border: 1px solid $red;
+  color: $primary-white;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border-radius: 0.25rem;
 }

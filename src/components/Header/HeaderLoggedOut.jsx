@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react"
 import Axios from "axios"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import DispatchContext from "../../DispatchContext"
-import { useNavigate } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons"
 
 function HeaderLoggedOut(props) {
   const navigate = useNavigate()
@@ -45,7 +46,7 @@ function HeaderLoggedOut(props) {
         <div className="password-container" style={{ position: "relative" }}>
           <input onChange={e => setPassword(e.target.value)} name="password" type={isPasswordVisible ? "text" : "password"} placeholder="Password" />
           <i className="toggle-password" id="toggle-password" style={{ cursor: "pointer", position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)" }} onClick={togglePasswordVisibility}>
-            {isPasswordVisible ? "🙈" : "👁️"}
+            <FontAwesomeIcon icon={isPasswordVisible ? faEyeSlash : faEye} />
           </i>
         </div>
         <button className="button button--blue">Sign In</button>
