@@ -13,9 +13,12 @@
   &__inner {
     max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-column-gap: 45px;
     grid-row-gap: 45px;
+    @include desktop {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
   }
   &__item {
     padding: 0.8rem;

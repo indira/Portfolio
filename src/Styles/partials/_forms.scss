@@ -16,16 +16,13 @@
 input,
 textarea {
   height: 2.5rem;
-  padding-left: 1rem;
   border: 1px solid $cloud;
   border-radius: 0.25rem;
   font-family: "Titillium Web";
   font-size: 1.5rem;
   width: 100%;
   margin-bottom: 1rem;
-  margin-right: 2rem;
   @include tablet {
-    padding: 1.5rem;
     width: 100%;
   }
   &:focus {
@@ -34,9 +31,13 @@ textarea {
     box-shadow: 0 0 0 0.1rem $secondary-blue;
   }
   &::placeholder {
-    font-weight: 400;
+    font-weight: 300;
+    padding-left: $vsmall;
     color: $secondary-black;
-    font-size: 1rem;
+    font-size: $vsmall;
+    @include tablet {
+      font-size: $small;
+    }
   }
 }
 textarea {
@@ -135,6 +136,9 @@ label {
   border: 1px solid $red;
   color: $primary-white;
   padding: 0.4rem;
-  font-size: 1.2rem;
+  font-size: $vsmall;
   border-radius: 0.25rem;
+  @include tablet {
+    font-size: 1.2rem;
+  }
 }

@@ -12,7 +12,7 @@
   &__logo {
     margin-top: 2rem;
     margin-bottom: 0;
-    font-size: $medium;
+    font-size: $small;
     color: $primary-black !important;
     text-align: center;
     padding-left: 1rem;
@@ -27,9 +27,12 @@
   &__navbar {
     margin: auto;
     padding-top: $vsmall;
-    font-size: $medium;
-    @include desktop {
+    font-size: $small;
+    @include tablet {
       font-size: $medium;
+    }
+    @include desktop {
+      font-size: $large;
       margin-right: 20px;
     }
   }

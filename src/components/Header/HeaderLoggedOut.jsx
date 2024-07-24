@@ -40,9 +40,7 @@ function HeaderLoggedOut(props) {
         </Link>
       </div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <input onChange={e => setUsername(e.target.value)} name="username" type="text" placeholder="Username or Email Address" autoComplete="off" />
-        </div>
+        <input onChange={e => setUsername(e.target.value)} name="username" type="text" placeholder="Username or Email Address" autoComplete="off" />
         <div className="password-container" style={{ position: "relative" }}>
           <input onChange={e => setPassword(e.target.value)} name="password" type={isPasswordVisible ? "text" : "password"} placeholder="Password" />
           <i className="toggle-password" id="toggle-password" style={{ cursor: "pointer", position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)" }} onClick={togglePasswordVisibility}>
