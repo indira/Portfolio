@@ -16,7 +16,6 @@ function Footer() {
         </div>
       </div>
       <div className="footer__social">
-        <div>
           <a href="https://github.com/Indira" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} /> GitHub
           </a>{" "}
@@ -25,7 +24,6 @@ function Footer() {
             {" "}
             <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
           </a>
-        </div>
       </div>
     </footer>
   )

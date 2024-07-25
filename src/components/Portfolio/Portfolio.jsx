@@ -41,7 +41,7 @@ function Portfolio() {
               https://indira.github.io/travel-site
             </a>
             <hr></hr>
-            
+
             <p></p>
             <h3 className="headline--large">P R O J E C T</h3>
             <h3 className="headline--medium">
@@ -74,8 +74,8 @@ function Portfolio() {
           <div className="container__right">
             <h3 className="headline--large">E X P E R I E N C E </h3>
             <hr></hr>
-            <h3 className="headline--medium"> Indira Soft | (Self-Employed) </h3>
-            <h5 className="headline--muted">SEP 2022 – JULY 2023, VANCOUVER, BC</h5>
+            <h3 className="headline--medium"> Indira Soft | (Freelance) </h3>
+            <h5 className="headline--muted">SEP 2022 – JUNE 2024, VANCOUVER, BC</h5>
             <ul>
               <li>
                 <p>
@@ -153,7 +153,6 @@ function Portfolio() {
                 <p>Reported technical and operational issues to the relevant committee of SEABC.</p>
               </li>
             </ul>
-            
           </div>
         </div>
       </div>

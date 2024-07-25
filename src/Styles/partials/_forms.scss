@@ -22,6 +22,7 @@ textarea {
   font-size: 1.5rem;
   width: 100%;
   margin-bottom: 1rem;
+  padding-left: $vsmall;
   @include tablet {
     width: 100%;
   }

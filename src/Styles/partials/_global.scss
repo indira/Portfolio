@@ -59,8 +59,14 @@ hr {
 
 .toggle-password {
   position: absolute;
-  top: 50%;
+  top: 50% !important;
   right: 10px;
   transform: translateY(-50%);
   font-size: 18px;
+}
+.svg-inline--fa.fa-eye {
+  display: var(--fa-display, inline-block);
+  height: 1.1em;
+  overflow: visible;
+  vertical-align: 0.525em;
 }
