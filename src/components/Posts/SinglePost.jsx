@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom"
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import moment from "moment-timezone"
 import { Link } from "react-router-dom"
 import Page from "../Page/Page"
+import DispatchContext from "../../DispatchContext"
 
 function SinglePost() {
+  const appDispatch = useContext(DispatchContext)
   const { id } = useParams()
   const [post, setPost] = useState()
   const [author, setAuthor] = useState()
@@ -23,10 +25,9 @@ function SinglePost() {
         const pstDate = moment(response.data.date).tz("America/Los_Angeles").format("MM.DD.YY")
         setDate(pstDate)
         const authorResponse = await axios.get(`${process.env.REACT_APP_API_ROOT}users/${response.data.author}`)
-        //setAuthor(authorResponse.data.avatar_urls[96])
         setAuthor(authorResponse.data.name)
       } catch (e) {
-        console.log(e.message)
+        appDispatch({ type: "flashMessage", value: { text: e.message, type: "error" } })
       }
     }
     fetchPost()
@@ -51,7 +52,7 @@ function SinglePost() {
                 Posted by <Link to={`/profile/${idAut}`}>{author}</Link> on {date}
               </p>
             </div>
-            <p className="gallery" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+            <p dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
           </div>
         </div>
       </div>

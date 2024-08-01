@@ -47,9 +47,7 @@ function Portfolio() {
             <h3 className="headline--medium">
               {" "}
               Software Developer |{" "}
-              <a href="https://innovationhub1.netlify.app/" target="_blank" rel="noreferrer">
                 Login System/Portfolio
-              </a>
             </h3>
             <h5 className="headline--muted">MAR 2024, Capstone Project | React, HTML, SCSS, Node JS, Express, MySQL</h5>
 
@@ -98,7 +96,7 @@ function Portfolio() {
                 <p>
                   Designed and developed a website for the EWBI Canada using the WordPress CMS.{" "}
                   <a href="https://www.ewbi-canada.org" target="_blank" rel="noreferrer">
-                    https://www.ewbi-canada.org
+                   Link
                   </a>
                 </p>
               </li>
@@ -115,7 +113,7 @@ function Portfolio() {
                 <p>
                   Constructed a search engine for Conference Proceedings spanning eleven conferences, optimizing accessibility and user experience.{" "}
                   <a href="https://www.caee.ca/conferenceproceedings/" target="_blank" rel="noreferrer">
-                    https://www.caee.ca/conferenceproceedings
+                    Link
                   </a>
                 </p>
               </li>

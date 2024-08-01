@@ -15,7 +15,12 @@
   animation: floatingAlert ease-in 5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  &.floating-alert:last-of-type {
+  &.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  &:last-of-type {
     display: block;
   }
 }

@@ -104,22 +104,20 @@ const HeaderLoggedOut = () => {
           if (state.loginField.isEmail) {
             url = `${process.env.REACT_APP_API_ROOT}check-email?email=${state.loginField.value}`
             const response = await axios.get(url)
-            console.log(response.data.exists, "email")
             dispatch({ type: "loginFieldUniqueResults", value: response.data.exists })
           } else {
             url = `${process.env.REACT_APP_API_ROOT}check-username?username=${state.loginField.value}`
             const response = await axios.get(url)
-            console.log(response.data.exists, "username")
             dispatch({ type: "loginFieldUniqueResults", value: response.data.exists })
           }
         } catch (e) {
-          console.log("There was a problem or the request was canceled.")
+          appDispatch({ type: "flashMessage", value: { text: "There was a problem or the request was canceled.", type: "error" } })
         }
       }
 
       fetchResults()
     }
-  }, [state.loginField.isEmail, state.loginField.checkCount, state.loginField.value, dispatch])
+  }, [state.loginField.isEmail, state.loginField.checkCount, state.loginField.value,appDispatch,dispatch])
 
   useEffect(() => {
     if (state.submitCount) {
@@ -129,12 +127,13 @@ const HeaderLoggedOut = () => {
           const response = await axios.post(url, { username: state.loginField.value, password: state.password.value })
           if (response.data) {
             appDispatch({ type: "login", data: response.data })
+            appDispatch({ type: "flashMessage", value: { text: "You have successfully logged in." } })
             navigate(`/`)
           } else {
-            console.log("Incorrect username/email and password")
+            appDispatch({ type: "flashMessage", value: { text: "Incorrect username/email and password", type: "error" } })
           }
         } catch (e) {
-          console.log("Something went wrong", e.message)
+          appDispatch({ type: "flashMessage", value: { text: "Incorrect password", type: "error" } })
         }
       }
       fetchResults()

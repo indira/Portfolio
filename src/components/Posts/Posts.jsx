@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
 import Page from "../Page/Page"
+import DispatchContext from "../../DispatchContext"
 
 const PortfolioPosts = () => {
+  const appDispatch = useContext(DispatchContext)
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
@@ -12,15 +14,14 @@ const PortfolioPosts = () => {
       try {
         let url = `${process.env.REACT_APP_API_ROOT}posts`
         const response = await axios.get(url)
-        console.log(response.data)
         setPosts(response.data)
       } catch (e) {
-        console.log(e.response?.data?.message || e.message)
+        appDispatch({ type: "flashMessage", value: { text: e.message, type: "error" } })
       }
     }
 
     fetchPosts()
-  }, [])
+  }, [appDispatch])
 
   return (
     <Page title="Posts">

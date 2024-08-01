@@ -32,17 +32,23 @@
       margin-right: 0;
     }
     &--title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      margin-bottom: 1.3rem;
+      @include tablet {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
     }
     &--paragraph {
-      font-size: 1.2rem;
+      font-size: 1rem;
       letter-spacing: 0.1rem;
       line-height: 1.6rem;
+      @include desktop {
+        font-size: 1.2rem;
+      }
     }
     &--portfolio {
       padding: 2rem;
-      font-family: "Gluten", cursive;
       @include tablet {
         padding: 3rem;
         flex: 6;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 //Calling the stylesheet
 import "../src/Styles/App.scss"
@@ -20,13 +20,9 @@ import Profile from "./components/Profile/Profile"
 import Posts from "./components/Posts/Posts"
 import SinglePost from "./components/Posts/SinglePost"
 function App() {
-  const [flashMessages, setFlashMessages] = useState([])
-
-  function addFlashMessage(msg) {
-    setFlashMessages(prev => prev.concat(msg))
-  }
   const initialState = {
     loggedIn: Boolean(localStorage.getItem("IndProtToken")),
+    flashMessages: [],
     user: {
       token: localStorage.getItem("IndProtToken"),
       username: localStorage.getItem("IndProtUsername"),
@@ -46,6 +42,9 @@ function App() {
       case "logout":
         draft.loggedIn = false
         return
+        case "flashMessage":
+          draft.flashMessages.push(action.value);
+          return;
       default:
         return
     }
@@ -73,17 +72,17 @@ function App() {
       localStorage.removeItem("IndProtUsername")
       localStorage.removeItem("IndProtAvatar")
     }
-  })
+  },[state.loggedIn,state.user.token,state.user.user_display_name,state.user.user_email, dispatch])
 
   return (
     <StateContext.Provider value={state}>
       <DispatchContext.Provider value={dispatch}>
         <BrowserRouter>
-          <FlashMessages messages={flashMessages} />
+        <FlashMessages messages={state.flashMessages} />
           <Header />
           <Routes>
             <Route path="/" element={state.loggedIn ? <HomeGuest /> : <Home />} />
-            <Route path="/register" element={<Register addFlashMessage={addFlashMessage} />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/profile/:username/*" element={<Profile />} />

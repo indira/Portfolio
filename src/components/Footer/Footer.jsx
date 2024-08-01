@@ -10,6 +10,7 @@ function Footer() {
         <div>
           <Link to="/">Home</Link> | <Link to="/portfolioposts">Experience</Link> | <Link to="/portfolio">Portfolio</Link>
         </div>
+        <p></p>
         <div>
           Copyright &copy; {new Date().getFullYear() + " "}
           <Link to="/">Indira</Link>. All rights reserved.

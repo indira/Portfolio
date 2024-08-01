@@ -2,7 +2,12 @@ function FlashMessages(props) {
   return (
     <div className="floating-alerts">
       {props.messages.map((msg, index) => {
-        return <div key = {index} className="floating-alert">{msg}</div>
+        const alertClass = msg.type === "error" ? "floating-alert error" : "floating-alert"
+        return (
+          <div key={index} className={alertClass}>
+            {msg.text}
+          </div>
+        )
       })}
     </div>
   )

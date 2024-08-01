@@ -183,15 +183,16 @@ const Register = () => {
             const tokenResponse = await axios.post(url, { username: state.username.value, password: state.password.value })
             if (tokenResponse.data) {
               appDispatch({ type: "login", data: tokenResponse.data })
+              appDispatch({ type: "flashMessage", value: { text: "You have successfully registered." } })
               navigate(`/`)
             } else {
-              console.log("Incorrect username and password")
+              appDispatch({ type: "flashMessage", value: { text: "There was a problem or the request was canceled.", type: "error" } })
             }
           } else {
-            console.log("Registration failed")
+            appDispatch({ type: "flashMessage", value: { text: "Registration failed", type: "error" } })
           }
         } catch (e) {
-          console.log("Something went wrong", e.message)
+          appDispatch({ type: "flashMessage", value: { text: `Something went wrong. ${e.message}`, type: "error" } })
         }
       }
       fetchResults()
