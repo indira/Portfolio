@@ -70,3 +70,9 @@ hr {
   overflow: visible;
   vertical-align: 0.525em;
 }
+.wp-block-image img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}

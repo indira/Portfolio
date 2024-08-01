@@ -58,11 +58,12 @@ const Register = () => {
         break
 
       case "usernameUniqueResults":
-        if (action.value.length === 1 && draft.username.value.length > 3) {
+        if (action.value) {
           draft.username.hasError = true
           draft.username.isUnique = false
-          draft.username.message = "That username is already taken"
+          draft.username.message = "Username is already taken"
         } else {
+          draft.username.hasError = false
           draft.username.isUnique = true
         }
         break
@@ -146,9 +147,9 @@ const Register = () => {
     if (state.username.checkCount) {
       async function fetchResults() {
         try {
-          let url = `${process.env.REACT_APP_API_ROOT}users?search=${state.username.value}`
+          let url = `${process.env.REACT_APP_API_ROOT}check-username?username=${state.username.value}`
           const response = await axios.get(url)
-          dispatch({ type: "usernameUniqueResults", value: response.data })
+          dispatch({ type: "usernameUniqueResults", value: response.data.exists })
         } catch (e) {
           console.log("There was a problem or the request was canceled.")
         }

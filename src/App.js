@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 //Calling the stylesheet
 import "../src/Styles/App.scss"
@@ -8,6 +8,7 @@ import HomeGuest from "./components/Home/HomeGuest"
 import Register from "./components/Register/Register"
 import Home from "./components/Home/Home"
 import AboutMe from "./components/AboutMe/AboutMe"
+import FlashMessages from "./components/FlashMessages/FlashMessages"
 import { useImmerReducer } from "use-immer"
 import SignIn from "./components/SignIn/SingnIn"
 import StateContext from "./StateContext"
@@ -19,6 +20,11 @@ import Profile from "./components/Profile/Profile"
 import Posts from "./components/Posts/Posts"
 import SinglePost from "./components/Posts/SinglePost"
 function App() {
+  const [flashMessages, setFlashMessages] = useState([])
+
+  function addFlashMessage(msg) {
+    setFlashMessages(prev => prev.concat(msg))
+  }
   const initialState = {
     loggedIn: Boolean(localStorage.getItem("IndProtToken")),
     user: {
@@ -73,10 +79,11 @@ function App() {
     <StateContext.Provider value={state}>
       <DispatchContext.Provider value={dispatch}>
         <BrowserRouter>
+          <FlashMessages messages={flashMessages} />
           <Header />
           <Routes>
             <Route path="/" element={state.loggedIn ? <HomeGuest /> : <Home />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<Register addFlashMessage={addFlashMessage} />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/profile/:username/*" element={<Profile />} />
