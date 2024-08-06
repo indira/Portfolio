@@ -2,7 +2,7 @@
 .site-header {
   display: flex;
   flex-direction: column;
-  height: 11rem;
+  height: 10rem;
   padding-left: 0;
   @include desktop {
     flex-direction: row;

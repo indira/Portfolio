@@ -19,6 +19,7 @@ import PortfolioPosts from "./components/Portfolio/PortfolioPosts"
 import Profile from "./components/Profile/Profile"
 import Posts from "./components/Posts/Posts"
 import SinglePost from "./components/Posts/SinglePost"
+import CreatePost from "./components/CreatePost/CreatePost"
 function App() {
   const initialState = {
     loggedIn: Boolean(localStorage.getItem("IndProtToken")),
@@ -90,6 +91,7 @@ function App() {
             <Route path="/portfolioposts" element={<PortfolioPosts />} />
             <Route path="/posts" element={<Posts />} />
             <Route path="/posts/:id" element={<SinglePost />} />
+            <Route path="/create-post" element={<CreatePost />}/>
           </Routes>
           <Footer />
         </BrowserRouter>

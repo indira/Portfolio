@@ -43,7 +43,7 @@ function SinglePost() {
     )
   return (
     <Page title={post.title.rendered}>
-      <div className="wrapper wrapper-border">
+      <div className="wrapper wrapper__border">
         <div className="features">
           <div className="features__single">
             <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />

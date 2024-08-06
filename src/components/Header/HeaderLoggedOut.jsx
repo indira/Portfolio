@@ -17,7 +17,8 @@ const HeaderLoggedOut = () => {
       hasError: false,
       message: "",
       isUnique: false,
-      checkCount: 0
+      checkCount: 0,
+      isEmail: false
     },
     password: {
       value: "",
@@ -41,6 +42,7 @@ const HeaderLoggedOut = () => {
           draft.loginField.hasError = true
           draft.loginField.message = "Username or Email cannot be less then 3 characters."
         }
+        draft.loginField.isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(draft.loginField.value)
         if (!draft.loginField.hasError && !action.noRequest) {
           draft.loginField.checkCount++
         }
@@ -108,16 +110,17 @@ const HeaderLoggedOut = () => {
           } else {
             url = `${process.env.REACT_APP_API_ROOT}check-username?username=${state.loginField.value}`
             const response = await axios.get(url)
+
             dispatch({ type: "loginFieldUniqueResults", value: response.data.exists })
           }
         } catch (e) {
-          appDispatch({ type: "flashMessage", value: { text: "There was a problem or the request was canceled.", type: "error" } })
+          console.log(e.message)
         }
       }
 
       fetchResults()
     }
-  }, [state.loginField.isEmail, state.loginField.checkCount, state.loginField.value,appDispatch,dispatch])
+  }, [state.loginField.isEmail, state.loginField.checkCount, state.loginField.value, appDispatch, dispatch])
 
   useEffect(() => {
     if (state.submitCount) {

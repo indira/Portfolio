@@ -212,7 +212,7 @@ const Register = () => {
 
   return (
     <Page title="RegisterHome">
-      <div className="container">
+      <div className="container wrapper__border">
         <div className="container__left">
           <h4 className="container__left--title">Register here!</h4>
           <p className="container__left--paragraph">Register here to become a member and share your thoughts and ideas on the app.</p>

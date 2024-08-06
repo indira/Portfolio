@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import DispatchContext from "../../DispatchContext"
 
 function HeaderLoggedIn(props) {
@@ -42,7 +42,9 @@ function HeaderLoggedIn(props) {
           <button onClick={handleLogout1} style={{ border: "none", background: "none", padding: 0 }}>
             <img className="headline-avatar" src={localStorage.getItem("IndProtAvatar")} alt="avatar" />
           </button>
-          <button className="button button--green">Create Post</button>
+          <button className="button button--green">
+            <Link to="/create-post">Create Post</Link>
+          </button>
           <button onClick={handleLogout} className="button button--blue">
             Sign Out
           </button>
