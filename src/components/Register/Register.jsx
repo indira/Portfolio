@@ -37,7 +37,9 @@ const Register = () => {
       case "usernameImmediately":
         draft.username.hasError = false
         draft.username.value = action.value
-        if (draft.username.value.length > 30) {
+        if (draft.username.value.length > 30 
+
+        ) {
           draft.username.hasError = true
           draft.username.message = "Username cannot exceed 30 characters"
         }
@@ -45,7 +47,7 @@ const Register = () => {
           draft.username.hasError = true
           draft.username.message = "Username can only contain letters and numbers"
         }
-        break
+        return
 
       case "usernameAfterDelay":
         if (draft.username.value.length < 3) {
@@ -55,7 +57,7 @@ const Register = () => {
         if (!draft.username.hasError && !action.noRequest) {
           draft.username.checkCount++
         }
-        break
+        return
 
       case "usernameUniqueResults":
         if (action.value) {
@@ -66,12 +68,12 @@ const Register = () => {
           draft.username.hasError = false
           draft.username.isUnique = true
         }
-        break
+        return
 
       case "emailImmediately":
         draft.email.hasError = false
         draft.email.value = action.value
-        break
+        return
 
       case "emailAfterDelay":
         if (!/^\S+@\S+$/.test(draft.email.value)) {
@@ -81,7 +83,7 @@ const Register = () => {
         if (!draft.email.hasError && !action.noRequest) {
           draft.email.checkCount++
         }
-        break
+        return
 
       case "emailUniqueResults":
         if (action.value) {
@@ -91,7 +93,7 @@ const Register = () => {
         } else {
           draft.email.isUnique = true
         }
-        break
+        return
 
       case "passwordImmediately":
         draft.password.hasError = false
@@ -100,23 +102,23 @@ const Register = () => {
           draft.password.hasError = true
           draft.password.message = "Password cannot exceed 50 characters."
         }
-        break
+        return
 
       case "passwordAfterDelay":
         if (draft.password.value.length < 8) {
           draft.password.hasError = true
           draft.password.message = "Password must be at least 8 characters."
         }
-        break
+        return
 
       case "submitForm":
         if (!draft.username.hasError && draft.username.isUnique && !draft.email.hasError && draft.email.isUnique && !draft.password.hasError) {
           draft.submitCount++
         }
-        break
+        return
 
       default:
-        break
+        return
     }
   }
 
@@ -180,10 +182,10 @@ const Register = () => {
           const response = await axios.post(`${process.env.REACT_APP_API_ROOT}register`, { username: state.username.value, email: state.email.value, password: state.password.value })
           if (response.data) {
             const url = `${process.env.REACT_APP_API_AUTH_TOKEN}`
-            const tokenResponse = await axios.post(url, { username: state.username.value, password: state.password.value })
-            if (tokenResponse.data) {
-              appDispatch({ type: "login", data: tokenResponse.data })
-              appDispatch({ type: "flashMessage", value: { text: "You have successfully registered." } })
+            const response = await axios.post(url, { username: state.username.value, password: state.password.value })
+            if (response.data) {
+              appDispatch({ type: "login", data: response.data })
+              appDispatch({ type: "flashMessage", value: { text: "Congrats! Welcome to your new account." } })
               navigate(`/`)
             } else {
               appDispatch({ type: "flashMessage", value: { text: "There was a problem or the request was canceled.", type: "error" } })
@@ -203,10 +205,10 @@ const Register = () => {
     e.preventDefault()
     dispatch({ type: "usernameImmediately", value: state.username.value })
     dispatch({ type: "usernameAfterDelay", value: state.username.value, noRequest: true })
-    dispatch({ type: "emailImmediately", value: state.email.value })
+    dispatch({ type: "emailImmediately", value: state.email.value})
     dispatch({ type: "emailAfterDelay", value: state.email.value, noRequest: true })
-    dispatch({ type: "passwordImmediately", value: state.password.value })
-    dispatch({ type: "passwordAfterDelay", value: state.password.value })
+    dispatch({ type: "passwordImmediately", value: state.password.value})
+    dispatch({ type: "passwordAfterDelay", value: state.password.value})
     dispatch({ type: "submitForm" })
   }
 

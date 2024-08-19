@@ -12,11 +12,12 @@
   &__logo {
     margin-top: 2rem;
     margin-bottom: 0;
-    font-size: $small;
+    font-size: $medium;
     color: $primary-black !important;
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-family: "Cedarville Cursive";
     @include desktop {
       margin-top: auto;
       margin-bottom: auto;

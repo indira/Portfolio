@@ -139,11 +139,16 @@ label {
 .alert {
   background-color: $red;
   border: 1px solid $red;
-  color: $primary-white;
+  color: $primary-black;
   padding: 0.4rem;
   font-size: $vsmall;
   border-radius: 0.25rem;
   @include tablet {
     font-size: 1.2rem;
+  }
+  .svg-inline--fa.fa-eye {
+    display: var(--fa-display, inline-block);
+    height: 0.1em;
+    overflow: visible;
   }
 }

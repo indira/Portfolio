@@ -133,10 +133,10 @@ const HeaderLoggedOut = () => {
             appDispatch({ type: "flashMessage", value: { text: "You have successfully logged in." } })
             navigate(`/`)
           } else {
-            appDispatch({ type: "flashMessage", value: { text: "Incorrect username/email and password", type: "error" } })
+            appDispatch({ type: "flashMessage", value: { text: "Invalid username/email or password", type: "error" } })
           }
         } catch (e) {
-          appDispatch({ type: "flashMessage", value: { text: "Incorrect password", type: "error" } })
+          appDispatch({ type: "flashMessage", value: { text: "Invalid password", type: "error" } })
         }
       }
       fetchResults()

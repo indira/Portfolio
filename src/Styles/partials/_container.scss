@@ -35,9 +35,10 @@
 
   &__left {
     background-color: $secondary-mercury;
-    font-family: "Gluten", cursive;
+    
     padding: 3rem;
     @include tablet {
+      font-family: "Playfair Display", cursive;
       flex: 6;
       padding-top: 8rem;
       margin-right: 0;

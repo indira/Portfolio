@@ -13,7 +13,7 @@ const Header = props => {
         <div className="site-header__logo">
           <Link to="/" className="site-header__logo">
             {" "}
-            INDIRA
+            Indira Pandey
           </Link>
           <a href="https://github.com/Indira" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
