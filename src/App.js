@@ -20,6 +20,7 @@ import Profile from "./components/Profile/Profile"
 import Posts from "./components/Posts/Posts"
 import SinglePost from "./components/Posts/SinglePost"
 import CreatePost from "./components/CreatePost/CreatePost"
+//import Search from "./components/Search/Search"
 function App() {
   const initialState = {
     loggedIn: Boolean(localStorage.getItem("IndProtToken")),
@@ -43,9 +44,9 @@ function App() {
       case "logout":
         draft.loggedIn = false
         return
-        case "flashMessage":
-          draft.flashMessages.push(action.value);
-          return;
+      case "flashMessage":
+        draft.flashMessages.push(action.value)
+        return
       default:
         return
     }
@@ -73,13 +74,13 @@ function App() {
       localStorage.removeItem("IndProtUsername")
       localStorage.removeItem("IndProtAvatar")
     }
-  },[state.loggedIn,state.user.token,state.user.user_display_name,state.user.user_email, dispatch])
+  }, [state.loggedIn, state.user.token, state.user.user_display_name, state.user.user_email, dispatch])
 
   return (
     <StateContext.Provider value={state}>
       <DispatchContext.Provider value={dispatch}>
         <BrowserRouter>
-        <FlashMessages messages={state.flashMessages} />
+          <FlashMessages messages={state.flashMessages} />
           <Header />
           <Routes>
             <Route path="/" element={state.loggedIn ? <HomeGuest /> : <Home />} />
@@ -91,8 +92,9 @@ function App() {
             <Route path="/portfolioposts" element={<PortfolioPosts />} />
             <Route path="/posts" element={<Posts />} />
             <Route path="/posts/:id" element={<SinglePost />} />
-            <Route path="/create-post" element={<CreatePost />}/>
+            <Route path="/create-post" element={<CreatePost />} />
           </Routes>
+
           <Footer />
         </BrowserRouter>
       </DispatchContext.Provider>

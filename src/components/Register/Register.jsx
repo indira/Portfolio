@@ -37,9 +37,7 @@ const Register = () => {
       case "usernameImmediately":
         draft.username.hasError = false
         draft.username.value = action.value
-        if (draft.username.value.length > 30 
-
-        ) {
+        if (draft.username.value.length > 30) {
           draft.username.hasError = true
           draft.username.message = "Username cannot exceed 30 characters"
         }
@@ -74,7 +72,6 @@ const Register = () => {
         draft.email.hasError = false
         draft.email.value = action.value
         return
-
       case "emailAfterDelay":
         if (!/^\S+@\S+$/.test(draft.email.value)) {
           draft.email.hasError = true
@@ -205,10 +202,10 @@ const Register = () => {
     e.preventDefault()
     dispatch({ type: "usernameImmediately", value: state.username.value })
     dispatch({ type: "usernameAfterDelay", value: state.username.value, noRequest: true })
-    dispatch({ type: "emailImmediately", value: state.email.value})
+    dispatch({ type: "emailImmediately", value: state.email.value })
     dispatch({ type: "emailAfterDelay", value: state.email.value, noRequest: true })
-    dispatch({ type: "passwordImmediately", value: state.password.value})
-    dispatch({ type: "passwordAfterDelay", value: state.password.value})
+    dispatch({ type: "passwordImmediately", value: state.password.value })
+    dispatch({ type: "passwordAfterDelay", value: state.password.value })
     dispatch({ type: "submitForm" })
   }
 

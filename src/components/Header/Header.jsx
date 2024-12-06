@@ -5,7 +5,7 @@ import StateContext from "../../StateContext"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 /*This component is for the header section of the page*/
-const Header = props => {
+const Header = () => {
   const appState = useContext(StateContext)
   return (
     <header>

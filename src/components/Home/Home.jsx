@@ -9,7 +9,7 @@ function Home() {
         <div className="container">
           <div className="container__left ">
             <h1 className="container__left--title">Hello, I'm Indira Pandey.</h1>
-            <h3 className="container__left--paragraph">I'm a full-stack developer based on beautiful city of Vancouver Canada.</h3>
+            <h3 className="container__left--paragraph">I'm a full-stack developer based on the beautiful city of Vancouver Canada.</h3>
             <div className="col-md-auto btn--martop">
               <button className="button button--white button--white-small button--white-small-top" type="submit">
                 <Link to="/register">Register Here</Link>
