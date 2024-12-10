@@ -96,7 +96,7 @@ function Portfolio() {
               </li>
             </ul>
             <h3 className="headline--medium"> Full Stack Software Developer | CAEE </h3>
-            <h5 className="headline--muted">JAN 2017 – SEP 2022, VANCOUVER, BC</h5>
+            <h5 className="headline--muted">AUG 2017 – SEP 2022, VANCOUVER, BC</h5>
             <ul>
               <li>
                 {" "}
