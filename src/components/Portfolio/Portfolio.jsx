@@ -20,7 +20,7 @@ function Portfolio() {
             </h3>
             <hr></hr>
             <h3 className="headline--large"> P R O F I L E</h3>
-            <p>Detail-oriented software engineer with expertise in interactive web applications and backend systems. Proficient in Spring Boot, Spring MVC, Hibernate, MySQL, and RESTful API integration. Skilled in front-end technologies including React, JavaScript, HTML, CSS, SCSS, Bootstrap, and Webpack, ensuring seamless user experiences. Experienced in fostering collaborative development environments via GitHub.</p>
+            <p>Detail-oriented software engineer with expertise in interactive web applications and backend systems. Proficient in Core Java, Spring Boot, Spring MVC, Hibernate, MySQL, and RESTful API integration. Skilled in front-end technologies including React, JavaScript, HTML, CSS, SCSS, Bootstrap, and Webpack, ensuring seamless user experiences. Experienced in fostering collaborative development environments via GitHub.</p>
             <hr></hr>
             <h3 className="headline--large"> S K I L L S</h3>
             <span className="headline--medium">
@@ -68,7 +68,7 @@ function Portfolio() {
           <div className="container__right">
             <h3 className="headline--large">E X P E R I E N C E </h3>
             <hr></hr>
-            <h3 className="headline--medium"> Earthquake Engineering Research Facility, UBC.</h3>
+            <h3 className="headline--medium">Software Developer(Consultant) | Earthquake Engineering Research Facility, UBC.</h3>
             <h5 className="headline--muted">SEP 2022 – JUNE 2024, VANCOUVER, BC</h5>
             <h3>Description:</h3>
             <p>Designed and developed a desktop application for the intuitive analysis and comparison of seismic data from bridge earthquake records. The application incorporates graphical data visualization using JFreeChart to enable researchers to effectively examine and interpret seismic properties, enhancing research productivity and data interpretation accuracy.</p>
@@ -123,13 +123,10 @@ function Portfolio() {
                 <p>Involved in various phases of the Software Development Life Cycle (SDLC) of the application like requirement gathering, design analysis and code development.</p>
               </li>
               <li>
-                <p>Utilized Java Swing in NetBeans IDE to create a clean, responsive user interface with components like JTable, JPanel, and JTabbedPane for enhanced usability and data management.</p>
+                <p>Designed and implemented a robust user account login system using JavaScript, HTML5, SCSS/CSS, PHP and MySQL, tailored to meet the unique needs of clients seeking personalized experiences. </p>
               </li>
               <li>
-                <p>Designed custom data visualization tools for intuitive and engaging displays of seismic properties</p>
-              </li>
-              <li>
-                <p>Designed custom data visualization tools for intuitive and engaging displays of seismic properties</p>
+                <p>Developed the backend of a tool that computes site-specific risk to hazard, the result of which is accessible to individual users through system log-in. </p>
               </li>
             </ul>
           </div>
