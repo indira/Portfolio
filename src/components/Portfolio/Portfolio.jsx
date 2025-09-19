@@ -20,7 +20,7 @@ function Portfolio() {
             </h3>
             <hr></hr>
             <h3 className="headline--large"> P R O F I L E</h3>
-            <p>Detail-oriented software engineer with expertise in interactive web applications and backend systems. Proficient in Core Java, Spring Boot, Spring MVC, Hibernate, MySQL, and RESTful API integration. Skilled in front-end technologies including React, JavaScript, HTML, CSS, SCSS, Bootstrap, and Webpack, ensuring seamless user experiences. Experienced in fostering collaborative development environments via GitHub.</p>
+            <p>Detail-oriented software engineer with expertise in interactive web applications and backend systems. Proficient in Core Java, Spring Boot, Hibernate, MySQL, and RESTful API integration. Skilled in front-end technologies including React, JavaScript, HTML, CSS, SCSS, Bootstrap, and Webpack, ensuring seamless user experiences. Experienced in fostering collaborative development environments via GitHub.</p>
             <hr></hr>
             <h3 className="headline--large"> S K I L L S</h3>
             <span className="headline--medium">
