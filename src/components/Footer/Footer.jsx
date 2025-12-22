@@ -17,14 +17,14 @@ function Footer() {
         </div>
       </div>
       <div className="footer__social">
-          <a href="https://github.com/Indira" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faGithub} /> GitHub
-          </a>{" "}
-          <strong> | </strong>
-          <a href="https://www.linkedin.com/in/indira-pandey/" target="_blank" rel="noopener noreferrer">
-            {" "}
-            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
-          </a>
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub} /> GitHub
+        </a>{" "}
+        <strong> | </strong>
+        <a href="" target="_blank" rel="noopener noreferrer">
+          {" "}
+          <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+        </a>
       </div>
     </footer>
   )
