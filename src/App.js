@@ -86,10 +86,10 @@ function App() {
             <Route path="/" element={state.loggedIn ? <HomeGuest /> : <Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/signin" element={<SignIn />} />
-            <Route path="/aboutme" element={<AboutMe />} />
+            <Route path="/aboutme" element={<Register />} />
             <Route path="/profile/:username/*" element={<Profile />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolioposts" element={<PortfolioPosts />} />
+            <Route path="/portfolioposts" element={<Register />} />
             <Route path="/posts" element={<Posts />} />
             <Route path="/posts/:id" element={<SinglePost />} />
             <Route path="/create-post" element={<CreatePost />} />
