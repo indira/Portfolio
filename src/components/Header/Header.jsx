@@ -15,16 +15,16 @@ const Header = () => {
             {" "}
             Indira Pandey
           </Link>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="/" target="_blank" rel="noopener noreferrer">
             {" "}
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
         <div className="site-header__navbar">
-          <Link to="/">Home </Link> | <Link to="/portfolioposts">Experience</Link> | <Link to="/portfolio">Portfolio</Link>
+          <Link to="/">Home </Link> | <Link to="/portfolioposts">Experience</Link> | <Link to="/Home">Home</Link>
         </div>
         <div className="site-header__elements">
           {appState.loggedIn ? (

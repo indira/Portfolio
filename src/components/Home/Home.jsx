@@ -15,7 +15,7 @@ function Home() {
                 <Link to="/register">Register Here</Link>
               </button>
               <button className="button button--white button--white-small" type="submit">
-                <Link to="/aboutme">About Me</Link>
+                <Link to="/home">About Me</Link>
               </button>
             </div>
           </div>
