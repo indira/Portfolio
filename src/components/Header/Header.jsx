@@ -15,10 +15,10 @@ const Header = () => {
             {" "}
             Indira Pandey
           </Link>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>{" "}
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             {" "}
             <FontAwesomeIcon icon={faLinkedin} />
           </a>

@@ -17,7 +17,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer__social">
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} /> GitHub
         </a>{" "}
         <strong> | </strong>
